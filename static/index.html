@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Summarize This Url</title>
+    <link href="style/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="main_container">
+        <header>
+            <div id="title_container">
+                <p class="content_font" id="title">Summarize This Url</p>
+            </div>
+        </header>
+        <form class="content_font main_about" id="input_form">
+            <span>I want to summarize the content of </span>
+            <input class="input_box" id="input_url" type="text" name="input_url" placeholder="URL" size="35" ><span> in </span>
+            <input class="input_box" id="input_sentences" type="text" name="input_sentences"  value="7" maxlength="3"> <span> sentences</span><br>
+            <button class="btn" id="summarize_btn">Summarize</button>
+        </form>
+        <hr>
+    </div>
+
+    <div id="data_container">
+    </div>
+
+    <div id="summary_title">
+    </div>
+
+    <div id="summary_container">
+    </div>
+
+    <footer>
+        <p>Created by Fauzan Kadri | <a class="no_decor" href="/">Github</a> | <a class="no_decor" href="/">Linkedin</a></p>
+    </footer>
+    <script src="js/api.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
