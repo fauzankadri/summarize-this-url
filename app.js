@@ -93,6 +93,10 @@ app.get('/api/summarize/url/:sentences/:url/', function (req, res, next) {
     })
 });
 
+app.get('/favicon.ico', function(req, res) {
+    res.status(204);
+});
+
 
 app.use(function (req, res, next) {
     console.log("HTTP Response", res.statusCode);
