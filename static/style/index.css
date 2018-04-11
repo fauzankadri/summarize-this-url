@@ -144,3 +144,13 @@ hr {
     font-size: 1.7em !important;
     margin: 0px 10px 10px 0px;
 }
+
+.no_decor {
+
+    color: #5b6c7b;
+
+}
+
+#author {
+    color: #5b6c7b;
+}
