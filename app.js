@@ -105,7 +105,7 @@ app.get('/api/summarize/url/:sentences/:url/', function (req, res, next) {
 
 app.get('/favicon.ico', function (req, res) {
     console.log("favicon")
-    res.status(204);
+    res.sendStatus(204);
 });
 
 
