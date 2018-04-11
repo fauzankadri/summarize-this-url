@@ -27,6 +27,16 @@ function update(name, url, mods, opts = {}, callback) {
     });
 }
 
+function ignoreFavicon(req, res, next) {
+    if (req.originalUrl === '/favicon.ico') {
+        res.status(204).json({ nope: true });
+    } else {
+        next();
+    }
+}
+
+app.use(ignoreFavicon);
+
 app.use(function (req, res, next) {
     console.log("HTTP request", req.method, req.url, req.body);
     next();
@@ -60,8 +70,8 @@ app.get('/api/summarize/url/:sentences/:url/', function (req, res, next) {
             if (error) return res.status(500).send('Server Error');
             //body = JSON.stringify(body);
             console.log("body: ", body);
-            if(body[0] == "<") {
-                return res.json({message: 'Bad error'});
+            if (body[0] == "<") {
+                return res.json({ message: 'Bad error' });
             }
             body = JSON.parse(body);
             if (body.sm_api_content != undefined && body.sm_api_content_reduced != undefined) {
@@ -93,7 +103,8 @@ app.get('/api/summarize/url/:sentences/:url/', function (req, res, next) {
     })
 });
 
-app.get('/favicon.ico', function(req, res) {
+app.get('/favicon.ico', function (req, res) {
+    console.log("favicon")
     res.status(204);
 });
 
