@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const request = require('request');
 const mongoose = require('mongoose');
+const favicon = require('serve-favicon');
 
 var bodyParser = require('body-parser');
 
