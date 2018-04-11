@@ -108,6 +108,8 @@ app.get('/favicon.ico', function (req, res) {
     res.sendStatus(204);
 });
 
+app.use(favicon(__dirname + '/static/media/favicon.ico'));
+
 
 app.use(function (req, res, next) {
     console.log("HTTP Response", res.statusCode);
